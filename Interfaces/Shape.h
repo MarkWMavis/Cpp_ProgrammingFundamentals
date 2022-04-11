@@ -2,7 +2,10 @@
 class Shape
 {
 public:
-	virtual double getVolume() = 0;
-
+	void setWidth(double w);
+	void setHeight(double h);
+protected:
+	double width;
+	double height;
 };
 
