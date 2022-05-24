@@ -1,4 +1,9 @@
 #include "STL.h"
+#include <list>
+#include <vector>
+#include <algorithm>
+#include <numeric>	// Accumulate Function
+
 bool comparator(int first, int second) {
 	return first < second;
 }
