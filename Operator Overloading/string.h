@@ -18,7 +18,7 @@ public:
 	const char* get_str() const;
 
 	Mystring& operator=(const Mystring& rhs);
-	Mystring& operator+(const Mystring& rhs);
+	Mystring& operator=(Mystring&& rhs);	//Double && says that the rhs is a r-value
 
 
 };
