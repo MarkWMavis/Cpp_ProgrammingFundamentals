@@ -1,4 +1,5 @@
 #include "string.h"
+#include <iostream>
 
 int main() {
 
@@ -22,6 +23,27 @@ int main() {
 	a = Mystring{ "Halo" };		//Overloaded constructor then move assignment
 	a = "Bonjour";				//Overloaded constructor then move assignment
 
-	
+
+
+	Mystring Paul{ "PAUL" };
+	Mystring paul;
+
+	Paul.display();
+	paul = -Paul;
+	Paul.display();
+
+
+	Mystring Equal("Equal");
+	Mystring equal("Equal");
+	Mystring NotEqual("NotEqual");
+
+	std::cout << (Equal == equal) << std::endl;
+	std::cout << (Equal == NotEqual) << std::endl;
+
+	Mystring Concat = Equal + "NotEqual";
+	Concat.display();
+
+
+
 	return 0;
 }

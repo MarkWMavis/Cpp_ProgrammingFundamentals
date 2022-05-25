@@ -2,9 +2,6 @@
 #ifndef _STRING_H_
 #define _STRING_H_
 
-#define _CRT_SECURE_NO_WARNINGS
-
-
 class Mystring {
 private:
 	char* str;
@@ -19,6 +16,15 @@ public:
 
 	Mystring& operator=(const Mystring& rhs);
 	Mystring& operator=(Mystring&& rhs);	//Double && says that the rhs is a r-value
+	
+	// Unary operators using a member method
+	Mystring operator-() const;
+
+	// Binary operators using member methods
+	Mystring operator+(const Mystring& rhs) const;
+	//Mystring operator-(const Mystring& rhs) const;
+	bool operator==(const Mystring& rhs) const;
+	//bool operator<(const Mystring& rhs) const;
 
 
 };

@@ -15,15 +15,21 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="op_overload_main.cpp">
+    <ClCompile Include="overload_main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="string.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="number.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="string.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="number.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
