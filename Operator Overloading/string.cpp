@@ -35,7 +35,7 @@ Mystring::~Mystring() {
 
 //Mystring Member Functions
 void Mystring::display() const {
-	std::cout << str << ":" << get_length() << std::endl;
+	std::cout << str << " : " << get_length() << std::endl;
 }
 int Mystring::get_length() const {
 	return (int)std::strlen(str);
@@ -44,25 +44,8 @@ const char* Mystring::get_str() const {
 	return str;
 }
 
-//Overloaded Assignment Operator
-Mystring Mystring::operator=(const char* s) {
-	//If empty string is passed in
-	if (strlen(s) <= 1) {			//If string empty
-		return *this;
-	}
-	else {
-		delete[]str;
 
-		str = new char[std::strlen(s) + 1];		//Create C string of length s+1
-		
-		strcpy_s(str, strlen(s) + 1, s);		//Copy String to str
-		
-		return str;
-	}
-}
-
-
-Mystring Mystring::operator=(const Mystring& rhs) {
+Mystring& Mystring::operator=(const Mystring& rhs) {
 	std::cout << "Using Overloaded Assignment Operator" << std::endl;
 
 	if (this == &rhs) {		//Check to make sure we arent assigning to ourselves
@@ -79,16 +62,19 @@ Mystring Mystring::operator=(const Mystring& rhs) {
 }
 
 //Overloaded Move Operator
-Mystring& Mystring::operator=(Mystring&& rhs) {
+// --> Much more efficient then copy constructor
+Mystring& Mystring::operator=(Mystring&& rhs) {		//&& means we want and R-value (variable without a name)
 	std::cout << "Using Overloaded Move Operator" << std::endl;
 	//Creating and Object based on an R-value reference */
 	
 	if (this == &rhs) {		//Check to make sure we arent assigning to ourselves
 		return *this;		//Return left Mystring Object reference
 	}
-	str = nullptr;		//Delete existing heap memory
+	delete[]str;		//Delete existing heap memory
+
 	str = rhs.str;		//point string at rhs objects heap memory
 	rhs.str = nullptr;	//Null out the rhs object str
+
 	return *this;		//Return left object
 }
 
@@ -130,20 +116,9 @@ Mystring Mystring::operator+(const Mystring & rhs) const {
 }
 
 
-
-
-
-//Mystring Mystring::operator-(const Mystring& rhs) const {
-//
-//}
-
 bool Mystring::operator==(const Mystring& rhs) const {
 	return (strcmp(str, rhs.str)==0);
 }
-
-//bool Mystring::operator<(const Mystring& rhs) const {
-//
-//}
 
 /*
 Mystring operator+(const Mystring& lhs, const Mystring& rhs) {

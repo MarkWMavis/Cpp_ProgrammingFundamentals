@@ -14,10 +14,10 @@ public:
 	int get_length() const;
 	const char* get_str() const;
 
-	Mystring operator=(const char* s);
-	Mystring operator=(const Mystring& rhs);
-	Mystring& operator=(Mystring&& rhs);	//Double && says that the rhs is a r-value
 	
+	Mystring& operator=(const Mystring& rhs);
+	Mystring& operator=(Mystring&& rhs);
+
 	// Unary operators using a member method
 	Mystring operator-() const;
 

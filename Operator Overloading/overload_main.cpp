@@ -3,7 +3,9 @@
 
 int main() {
 
-	OverloadingAssignmentOperator();
+	//OverloadingAssignmentOperator();
+	//bOverloadingMoveOperator();
+	OverloadingOperationsAsMemberFunctions();
 
 
 	

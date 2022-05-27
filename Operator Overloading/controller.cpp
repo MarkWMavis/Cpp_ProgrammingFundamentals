@@ -14,25 +14,28 @@ void OverloadingAssignmentOperator() {
 }
 
 void OverloadingMoveOperator() {
-	Mystring stooges;
-	stooges = "Larry, Moe, and Curly";	//This works because of the 
-	stooges.display();
+	//Mystring s1;
+	//s1 = Mystring{ "Frank" };
 	
 	Mystring a{ "Hello" };		//Overloaded constructor
+
+	//For R-values --> we want to use Move Constructors over Copy Constructors because
+	//	they are much more efficient.
 	a = Mystring{ "Halo" };		//Overloaded constructor then move assignment
 	a = "Bonjour";				//Overloaded constructor then move assignment
 }
 
 void OverloadingOperationsAsMemberFunctions() {
-
+	
+	// Testing Unary Overloaded Operator (take no arguments)
 	Mystring Paul{ "PAUL" };
 	Mystring paul;
-
 	Paul.display();
 	paul = -Paul;
 	Paul.display();
 
 
+	// Testing Overloaded binary Operators (take one argument)
 	Mystring Equal("Equal");
 	Mystring equal("Equal");
 	Mystring NotEqual("NotEqual");
