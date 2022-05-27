@@ -1,7 +1,9 @@
 #include "controller.h"
-#include "string.h"
+#include "OverloadedMemberOperators.h"
+#include "OverloadedNonMemberOperators.h"
 #include <iostream>
 
+//Functions that implement the exerices using the Class that has Overloaded Member Operators
 void OverloadingAssignmentOperator() {
 	Mystring a{ "Hello" };		//Using overloaded constructor
 	Mystring b;					//Using default constructor
@@ -12,7 +14,6 @@ void OverloadingAssignmentOperator() {
 	a.display();
 	b.display();
 }
-
 void OverloadingMoveOperator() {
 	//Mystring s1;
 	//s1 = Mystring{ "Frank" };
@@ -24,8 +25,7 @@ void OverloadingMoveOperator() {
 	a = Mystring{ "Halo" };		//Overloaded constructor then move assignment
 	a = "Bonjour";				//Overloaded constructor then move assignment
 }
-
-void OverloadingOperationsAsMemberFunctions() {
+void OverloadingMemberOperators() {
 	
 	// Testing Unary Overloaded Operator (take no arguments)
 	Mystring Paul{ "PAUL" };
@@ -36,6 +36,19 @@ void OverloadingOperationsAsMemberFunctions() {
 
 
 	// Testing Overloaded binary Operators (take one argument)
+
+	//	Operator+ Test
+	Mystring larry{ "Larry" };
+	Mystring moe{ "Moe" };
+	Mystring stooges{ " is one of the three stooges" };
+	
+	Mystring result = larry + stooges;		//larry.operator+(stooges);
+	result.display();
+	
+	result = moe + " is also a stooge";		//moe.operator+(" is also a stooge");
+	result.display();
+
+	// Operator== Test
 	Mystring Equal("Equal");
 	Mystring equal("Equal");
 	Mystring NotEqual("NotEqual");
@@ -43,5 +56,34 @@ void OverloadingOperationsAsMemberFunctions() {
 	std::cout << (Equal == equal) << std::endl;
 	std::cout << (Equal == NotEqual) << std::endl;
 
+
+
+}
+
+//FFunctions that implement the exerices using the Class that has Overloaded Non-Member Operators
+void OverloadingNonMemberOperators() {
+	Mystring2 larry{ "Larry" };
+	Mystring2 moe{ "Moe" };
+	Mystring2 stooges{ " is one of the three stooges" };
+	Mystring2 message = larry + stooges;
+	message.display();
+	message = moe + " is also one of the stooges";
+	message.display();
+		
+	Mystring2 a{ "Hello" };
+	Mystring2 b{ " There" };
+	Mystring2 result = a + b;
+
+	result.display();
+
+	Mystring2 lowerCase;
+	Mystring2 upperCase{ "UPPER CASE" };
+	lowerCase = -upperCase;
+	lowerCase.display();
+
+	Mystring2 markmavis{ "MARK MAVIS" };
+	markmavis.display();
+	markmavis = -markmavis;
+	markmavis.display();
 
 }

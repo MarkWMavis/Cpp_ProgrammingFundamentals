@@ -3,4 +3,7 @@
 
 void OverloadingAssignmentOperator();
 void OverloadingMoveOperator();
-void OverloadingOperationsAsMemberFunctions();
+void OverloadingMemberOperators();
+
+
+void OverloadingNonMemberOperators();

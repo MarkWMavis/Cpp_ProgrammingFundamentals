@@ -1,6 +1,6 @@
 
-#ifndef _STRING_H_
-#define _STRING_H_
+#ifndef _OVERLOADEDMEMBEROPERATORS_H_
+#define _OVERLOADEDMEMBEROPERATORS_H_
 
 class Mystring {
 private:
@@ -14,27 +14,16 @@ public:
 	int get_length() const;
 	const char* get_str() const;
 
-	
-	Mystring& operator=(const Mystring& rhs);
-	Mystring& operator=(Mystring&& rhs);
-
 	// Unary operators using a member method
 	Mystring operator-() const;
 
 	// Binary operators using member methods
 	Mystring operator+(const Mystring& rhs) const;
-
-
-	//Mystring operator-(const Mystring& rhs) const;
+	Mystring& operator=(const Mystring& rhs);
+	Mystring& operator=(Mystring&& rhs);
 	bool operator==(const Mystring& rhs) const;
-	//bool operator<(const Mystring& rhs) const;
-	
-	//friend Mystring operator+(const Mystring& lhs, const Mystring& rhs);
 };
 
-//Non-member Operator Overload
-Mystring operator+(const Mystring& lhs, const Mystring& rhs);
 
 
-
-#endif // !_OPERATOR_OVERLOADING_H_
+#endif // !_OVERLOADEDMEMBEROPERATORS_H_

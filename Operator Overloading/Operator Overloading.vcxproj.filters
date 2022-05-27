@@ -18,7 +18,7 @@
     <ClCompile Include="overload_main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="string.cpp">
+    <ClCompile Include="OverloadedMemberOperators.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="number.cpp">
@@ -27,15 +27,21 @@
     <ClCompile Include="controller.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="OverloadedNonMemberOperators.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="string.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="number.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="controller.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="OverloadedMemberOperators.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="OverloadedNonMemberOperators.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

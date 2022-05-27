@@ -1,6 +1,6 @@
-#include <string>
+#include "OverloadedMemberOperators.h"
 #include <iostream>
-#include "string.h"
+#include <string>
 
 //Default Constructor
 Mystring::Mystring() : str { nullptr } { 
@@ -101,12 +101,11 @@ Mystring Mystring::operator-() const {
 Mystring Mystring::operator+(const Mystring & rhs) const {
 	std::cout << "Using Overloaded Binary Addition Operator" << std::endl;
 	
-	int length = strlen(str) + strlen(rhs.str) + 1;		//Get total needed buffer length
+	size_t buff_size = strlen(str) + strlen(rhs.str) + 1;		//Get total needed buffer length
 	
-	char* buff = new char[length];						//Create Buffer
-	
-	strcpy_s(buff, length*sizeof(char), rhs.str);		//Copy first String into buffer
-	strcat_s(str, length*sizeof(char), rhs.str);		//Concatenate the buffer string and the right hand side string
+	char* buff = new char[buff_size];						//Create Buffer
+	strcpy_s(buff, buff_size*sizeof(char), str);		//Copy first String into buffer
+	strcat_s(buff, buff_size*sizeof(char), rhs.str);		//Concatenate the buffer string and the right hand side string
 	
 	Mystring temp{buff};								//Create Mystring object with buffer string
 	
@@ -114,7 +113,6 @@ Mystring Mystring::operator+(const Mystring & rhs) const {
 	
 	return temp;										//Return Mystring object
 }
-
 
 bool Mystring::operator==(const Mystring& rhs) const {
 	return (strcmp(str, rhs.str)==0);
