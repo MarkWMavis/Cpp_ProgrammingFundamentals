@@ -140,10 +140,12 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="number.cpp" />
+    <ClCompile Include="controller.cpp" />
     <ClCompile Include="overload_main.cpp" />
     <ClCompile Include="string.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="controller.h" />
     <ClInclude Include="number.h" />
     <ClInclude Include="string.h" />
   </ItemGroup>

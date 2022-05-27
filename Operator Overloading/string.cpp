@@ -2,29 +2,38 @@
 #include <iostream>
 #include "string.h"
 
+//Default Constructor
 Mystring::Mystring() : str { nullptr } { 
 	str = new char[1]; 
 	*str = '\0';
 }
+
+//Overloaded Constructor
 Mystring::Mystring(const char* s) : str{ nullptr } {
-	if (s == nullptr) {
-		str = new char[1];
-		*str = '\0';
+	//If empty string is passed in
+	if (s == nullptr) {			//If string empty
+		str = new char[1];		//create just a string of length 1
+		*str = '\0';			//with just a null terminator
 	}
 	else {
-		str = new char[std::strlen(s) + 1];
-		strcpy_s(str, strlen(s) + 1, s);
+		str = new char[std::strlen(s) + 1];		//Create C string of length s+1
+		strcpy_s(str, strlen(s) + 1, s);		//Copy String to str
 	}
 }
-//Copy Constructor
+
+//Overloaded Copy Constructor
 Mystring::Mystring(const Mystring& source) : str{ nullptr } {
 	str = new char[std::strlen(source.str) + 1];
 	strcpy_s(str, strlen(source.str) + 1, source.str);
 
 }
+
+//Destructor
 Mystring::~Mystring() {
-	//delete str;
+	delete[]str;
 }
+
+//Mystring Member Functions
 void Mystring::display() const {
 	std::cout << str << ":" << get_length() << std::endl;
 }
@@ -34,56 +43,95 @@ int Mystring::get_length() const {
 const char* Mystring::get_str() const {
 	return str;
 }
-//Type &Type::operator=(const Type &rhs);
-Mystring& Mystring::operator=(const Mystring& rhs) {
-	std::cout << "Using Copy Constructor" << std::endl;
+
+//Overloaded Assignment Operator
+Mystring Mystring::operator=(const char* s) {
+	//If empty string is passed in
+	if (strlen(s) <= 1) {			//If string empty
+		return *this;
+	}
+	else {
+		delete[]str;
+
+		str = new char[std::strlen(s) + 1];		//Create C string of length s+1
+		
+		strcpy_s(str, strlen(s) + 1, s);		//Copy String to str
+		
+		return str;
+	}
+}
+
+
+Mystring Mystring::operator=(const Mystring& rhs) {
+	std::cout << "Using Overloaded Assignment Operator" << std::endl;
+
 	if (this == &rhs) {		//Check to make sure we arent assigning to ourselves
 		return *this;		// - if so, return left had object
 	}
+
 	delete[] this->str;		//Deallocate the storage space already given to the Object
+	
 	str = new char[strlen(rhs.str) + 1];	//Allocate space for right handside string including null terminator
+	
 	strcpy_s(this->str, strlen(rhs.str) + 1, rhs.str);	//Copy cstring over to left side object
 
-	return *this;
+	return *this;		//Return a Reference(address) to the left hand side object
 }
-//Move Constructor---------------------------------
-//Creating and Object based on an R-value reference
+
+//Overloaded Move Operator
 Mystring& Mystring::operator=(Mystring&& rhs) {
+	std::cout << "Using Overloaded Move Operator" << std::endl;
+	//Creating and Object based on an R-value reference */
 	
-	std::cout << "Using Move Constructor" << std::endl;
-	if (this == &rhs) { return *this; }
+	if (this == &rhs) {		//Check to make sure we arent assigning to ourselves
+		return *this;		//Return left Mystring Object reference
+	}
 	str = nullptr;		//Delete existing heap memory
 	str = rhs.str;		//point string at rhs objects heap memory
 	rhs.str = nullptr;	//Null out the rhs object str
 	return *this;		//Return left object
-
 }
+
+/* Unary Operator Overload as a member method */
 Mystring Mystring::operator-() const {
+	std::cout << "Using Overloaded Unary Minus Operator" << std::endl;
 
-	char* buff = new char[strlen(str) + 1];
+	char* buff = new char[strlen(str) + 1];		//Create a buffer to hold Uppercase String
 
-	strcpy_s(buff, strlen(str)+1, str);
+	strcpy_s(buff, strlen(str)+1, str);			//Copy Upper Case string to buffer
 
-	for (int i = 0; i < strlen(buff); i++) {
-		buff[i] = std::tolower(buff[i]);
+	for (int i = 0; i < strlen(buff); i++) {	//Loop through string one at a time and make lower case
+		buff[i] = std::tolower(buff[i]);		//To Lowercase function
 	}
 
-	Mystring temp{ buff };
+	Mystring temp{ buff };						//put the cstring into a Mystring Object
 
-	delete[] buff;
+	delete[] buff;								//Release buffer resource
 
-	return temp;
+	return temp;								//Return the Mystring Object
 }
 
-Mystring Mystring::operator+(const Mystring& rhs) const {
-	int length = strlen(str) + strlen(rhs.str) + 1;
-	char* buff = new char[length];
-	strcpy_s(buff, length*sizeof(char), rhs.str);
-	strcat_s(str, length*sizeof(char), rhs.str);
-	Mystring temp{buff};
-	delete[]buff;
-	return temp;
+/* Binary Operator Overload as member methods */
+Mystring Mystring::operator+(const Mystring & rhs) const {
+	std::cout << "Using Overloaded Binary Addition Operator" << std::endl;
+	
+	int length = strlen(str) + strlen(rhs.str) + 1;		//Get total needed buffer length
+	
+	char* buff = new char[length];						//Create Buffer
+	
+	strcpy_s(buff, length*sizeof(char), rhs.str);		//Copy first String into buffer
+	strcat_s(str, length*sizeof(char), rhs.str);		//Concatenate the buffer string and the right hand side string
+	
+	Mystring temp{buff};								//Create Mystring object with buffer string
+	
+	delete[]buff;										//Release buffer resources
+	
+	return temp;										//Return Mystring object
 }
+
+
+
+
 
 //Mystring Mystring::operator-(const Mystring& rhs) const {
 //
@@ -96,3 +144,16 @@ bool Mystring::operator==(const Mystring& rhs) const {
 //bool Mystring::operator<(const Mystring& rhs) const {
 //
 //}
+
+/*
+Mystring operator+(const Mystring& lhs, const Mystring& rhs) {
+	int length = strlen(lhs.str) + strlen(rhs.str) + 1;
+	char* buff = new char[length];
+	strcpy_s(buff, strlen(lhs.str), lhs.str);
+	strcat_s(buff, length * sizeof(char), rhs.str);
+
+	Mystring temp{ buff };
+	delete[] buff;
+	return temp;
+}
+*/
