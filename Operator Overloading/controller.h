@@ -7,3 +7,4 @@ void OverloadingMemberOperators();
 
 
 void OverloadingNonMemberOperators();
+void OverloadingStreamInsertionAndExtraction();

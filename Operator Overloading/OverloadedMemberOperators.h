@@ -22,6 +22,7 @@ public:
 	Mystring& operator=(const Mystring& rhs);
 	Mystring& operator=(Mystring&& rhs);
 	bool operator==(const Mystring& rhs) const;
+
 };
 
 

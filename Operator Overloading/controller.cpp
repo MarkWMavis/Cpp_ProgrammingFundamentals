@@ -60,6 +60,8 @@ void OverloadingMemberOperators() {
 
 }
 
+
+
 //FFunctions that implement the exerices using the Class that has Overloaded Non-Member Operators
 void OverloadingNonMemberOperators() {
 	Mystring2 larry{ "Larry" };
@@ -87,3 +89,25 @@ void OverloadingNonMemberOperators() {
 	markmavis.display();
 
 }
+void OverloadingStreamInsertionAndExtraction() {
+	Mystring2 string1{ "String 1" };
+	Mystring2 string2{ "String 2" };
+
+	std::cout << string1 << std::endl;
+	std::cout << "This is " << string1 << " and this is " << string2 << std::endl;
+
+
+	Mystring2 larry{ "Larry" };
+	Mystring2 moe{ "Moe" };
+	Mystring curly{};
+
+	std::cout << "Enter the third stooge's first name ";
+	std::cin >> curly;
+
+
+
+
+
+
+};
+

@@ -1,12 +1,14 @@
-
-#ifndef _NONOVERLOADEDMEMBEROPERATORS_H_
-#define _NONOVERLOADEDMEMBEROPERATORS_H_
+#include <iostream>
+#ifndef _OVERLOADEDNONMEMBEROPERATORS_H_
+#define _OVERLOADEDNONMEMBEROPERATORS_H_
 
 class Mystring2 {
 	friend Mystring2 operator+(const Mystring2& lhs, const Mystring2& rhs);
 	friend Mystring2 operator-(const Mystring2& Obj);
 	friend bool operator==(const Mystring2& lhs, const Mystring2& rhs);
 	friend bool operator<(const Mystring2& lhs, const Mystring2& rhs);
+	friend std::ostream& operator<<(std::ostream& os, const Mystring2& obj);
+	friend std::istream& operator>>(std::istream& is, Mystring2& obj);
 private:
 	char* str;
 public:
@@ -21,4 +23,4 @@ public:
 	Mystring2& operator=(const Mystring2& rhs);
 	Mystring2& operator=(Mystring2&& rhs);
 };
-#endif // !_NONOVERLOADEDMEMBEROPERATORS_H_
+#endif // !_OVERLOADEDNONMEMBEROPERATORS_H_

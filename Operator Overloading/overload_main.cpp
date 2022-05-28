@@ -15,8 +15,8 @@ int main() {
 	OverloadingMemberOperators();
 	*/
 
-	OverloadingNonMemberOperators();
-
+	//OverloadingNonMemberOperators();
+	OverloadingStreamInsertionAndExtraction();
 	
 
 
