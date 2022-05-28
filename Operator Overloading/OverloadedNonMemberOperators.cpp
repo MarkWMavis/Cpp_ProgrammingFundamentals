@@ -1,6 +1,5 @@
 #include "OverloadedNonMemberOperators.h"
 #include <string>
-#include <iostream>
 
 
 // Mystring Class Friended Operator Overloads
@@ -27,19 +26,22 @@ Mystring2 operator-(const Mystring2& Obj) {
 bool operator==(const Mystring2& lhs, const Mystring2& rhs) {
 	return (strcmp(lhs.str, rhs.str) == 0);
 }
+
+//Overloaded Extraction Operator
 std::ostream& operator<<(std::ostream& os, const Mystring2& obj) {
 	os << obj.get_str();
 	return os;
 }
+
+//Overloaded Insertion Operator
 std::istream& operator>>(std::istream& is, Mystring2& obj) {
 	char* buff = new char[1000];
 	is >> buff;
 	obj = Mystring2{ buff };
+	delete[]buff;
 	return is;
 
 }
-
-
 // Mystring Class Implementations
 Mystring2::Mystring2() : str{ nullptr } {
 	str = new char[1];

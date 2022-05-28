@@ -96,18 +96,17 @@ void OverloadingStreamInsertionAndExtraction() {
 	std::cout << string1 << std::endl;
 	std::cout << "This is " << string1 << " and this is " << string2 << std::endl;
 
-
 	Mystring2 larry{ "Larry" };
 	Mystring2 moe{ "Moe" };
-	Mystring curly{};
+	Mystring2 curly{};
 
 	std::cout << "Enter the third stooge's first name ";
 	std::cin >> curly;
 
+	std::cout << "The three stooges names separated by a space: ";
+	std::cin >> larry >> moe >> curly;
 
-
-
-
+	std::cout << "The three stooges are " << larry << ", " << moe << ", and " << curly << std::endl;
 
 };
 
