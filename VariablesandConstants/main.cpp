@@ -8,7 +8,6 @@
 
 int globalvariable{ 18 };		// Global Variable. Visible anywhere
 
-
 int main() {
 
 	//std::cout << "Global Variable is: " << globalvariable << std::endl;
