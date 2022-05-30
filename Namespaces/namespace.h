@@ -12,10 +12,11 @@ namespace ClassNamespace {
 
 	class Person {
 	public:
+		Person(std::string);
 		std::string address();
 		void address(std::string);
 		void dump();
 	private:
-		std::vector<int> size;
+		int size;
 	};
 }
