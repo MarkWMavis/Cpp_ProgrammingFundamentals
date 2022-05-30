@@ -77,6 +77,7 @@ void multi_dimensional_vector::declare_vector() {
 void challenge::exercise() {
 	std::vector<int> vector1;
 	std::vector<int> vector2;
+
 	vector1.push_back(10);
 	vector1.push_back(20);
 	std::cout << vector1.at(0) << std::endl;
@@ -101,6 +102,5 @@ void challenge::exercise() {
 				std::cout << std::endl;
 			}
 		}
-		
 	}
 }
