@@ -1,5 +1,9 @@
 #pragma once
+namespace Math {
+	void math_library_exercise();
+}
 
 
-void MathLibraryExercise();
-void RandomNumberGenerator();
+namespace NumberGen {
+	void random_number_generator();
+}

@@ -3,8 +3,8 @@
 
 int main() {
 
-	//MathLibraryExercise();
-	RandomNumberGenerator();
+	Math::math_library_exercise();
+	NumberGen::random_number_generator();
 
 	return 0;
 }
