@@ -32,9 +32,8 @@ void multi_dimensional_array::declare_array() {
 		{2, 3, 3, 5},
 		{1, 4, 4, 5}
 	};
-
 }
-void vector::declare_vector() {
+void single_dimensional_vector::declare_vector() {
 	std::vector<char> vowels(5);			//Creating a vector of 5 characters
 	std::vector<int>	test_scores(10);	//Creating a vector of 10 integers all set to 0
 
@@ -49,6 +48,59 @@ void vector::declare_vector() {
 	std::cout << "Test Score 02: " << test_scores1.at(1) << std::endl;
 	std::cout << "Test Score 03: " << test_scores1.at(2) << std::endl;
 	std::cout << "Test Score 04: " << test_scores1.at(3) << std::endl;
+	
+	test_scores1.at(3) = 78;
+	
+	std::cout << "Test Score 04: " << test_scores1.at(3) << std::endl;
 
+	test_scores1.push_back(68);
+	test_scores1.push_back(99);
 
+	std::cout << "Test Score 05: " << test_scores1.at(4) << std::endl;
+	std::cout << "Test Score 06: " << test_scores1.at(5) << std::endl;
+	std::cout << "Test Score 07: " << test_scores1.at(6) << std::endl;
+
+	std::cout << "Test Scores Size: " << test_scores1.size() << std::endl;
+}
+
+void multi_dimensional_vector::declare_vector() {
+	//Vector of Vectors
+	std::vector<std::vector<int>> multi_vector{
+		{100, 222, 333, 545},
+		{100, 222, 333, 545},
+		{100, 222, 333, 545}
+	};
+
+	std::cout << "Reviewer 1, Movie 2 score: " << multi_vector[0][1] << std::endl;
+}
+
+void challenge::exercise() {
+	std::vector<int> vector1;
+	std::vector<int> vector2;
+	vector1.push_back(10);
+	vector1.push_back(20);
+	std::cout << vector1.at(0) << std::endl;
+	std::cout << vector1.at(1) << std::endl;
+
+	vector2.push_back(100);
+	vector2.push_back(200); 
+	std::cout << vector2.at(0) << std::endl;
+	std::cout << vector2.at(1) << std::endl;
+
+	std::vector<std::vector<int>> vector_2d;
+	vector_2d.push_back(vector1);
+	vector_2d.push_back(vector2);
+
+	for (int i = 0; i < vector_2d[0].size(); i++) {
+		for (int j = 0; j < vector_2d[1].size(); j++) {
+			std::cout << vector_2d[i].at(j);
+			if (j < vector_2d[1].size()-1) {
+				std::cout << ", ";
+			}
+			else {
+				std::cout << std::endl;
+			}
+		}
+		
+	}
 }

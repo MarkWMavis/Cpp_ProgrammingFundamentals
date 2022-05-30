@@ -27,7 +27,9 @@ int main() {
 	
 	//single_dimensional_array::declare_array();
 	//multi_dimensional_array::declare_array();
-	vector::declare_vector();
+	//single_dimensional_vector::declare_vector();
+	//multi_dimensional_vector::declare_vector();
+	challenge::exercise();
 
 	return 0;
 }
