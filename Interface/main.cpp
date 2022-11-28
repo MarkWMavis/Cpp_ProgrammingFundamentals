@@ -1,11 +1,11 @@
+#include "Classes/Rectangle.h"
+#include "Classes/Triangle.h"
+
+#include <cstdlib>
 #include <iostream>
-#include "Shape.h"
-#include "Triangle.h"
-#include "Rectangle.h"
 
 
 int main() {
-
 	Rectangle Rect;
 	Rect.setHeight(10);
 	Rect.setWidth(5);
@@ -15,13 +15,6 @@ int main() {
 	Tri.setHeight(25.6);
 	Tri.setWidth(19.23);
 	std::cout << "Triangle area: " << Tri.getArea() << std::endl;
-
-
-
-
-
-
-
 
 	return 0;
 }

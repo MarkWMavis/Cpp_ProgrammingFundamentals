@@ -2,6 +2,7 @@
 #include "OverloadedMemberOperators.h"
 #include "OverloadedNonMemberOperators.h"
 #include <iostream>
+using namespace std;
 
 //Functions that implement the exerices using the Class that has Overloaded Member Operators
 void OverloadingAssignmentOperator() {
@@ -27,6 +28,7 @@ void OverloadingMoveOperator() {
 }
 void OverloadingMemberOperators() {
 	
+
 	// Testing Unary Overloaded Operator (take no arguments)
 	Mystring Paul{ "PAUL" };
 	Mystring paul;
@@ -53,8 +55,8 @@ void OverloadingMemberOperators() {
 	Mystring equal("Equal");
 	Mystring NotEqual("NotEqual");
 
-	std::cout << (Equal == equal) << std::endl;
-	std::cout << (Equal == NotEqual) << std::endl;
+	cout << (Equal == equal) << endl;
+	cout << (Equal == NotEqual) << endl;
 
 
 
@@ -93,20 +95,20 @@ void OverloadingStreamInsertionAndExtraction() {
 	Mystring2 string1{ "String 1" };
 	Mystring2 string2{ "String 2" };
 
-	std::cout << string1 << std::endl;
-	std::cout << "This is " << string1 << " and this is " << string2 << std::endl;
+	cout << string1 << endl;
+	cout << "This is " << string1 << " and this is " << string2 << endl;
 
 	Mystring2 larry{ "Larry" };
 	Mystring2 moe{ "Moe" };
 	Mystring2 curly{};
 
-	std::cout << "Enter the third stooge's first name ";
-	std::cin >> curly;
+	cout << "Enter the third stooge's first name ";
+	cin >> curly;
 
-	std::cout << "The three stooges names separated by a space: ";
-	std::cin >> larry >> moe >> curly;
+	cout << "The three stooges names separated by a space: ";
+	cin >> larry >> moe >> curly;
 
-	std::cout << "The three stooges are " << larry << ", " << moe << ", and " << curly << std::endl;
+	cout << "The three stooges are " << larry << ", " << moe << ", and " << curly << endl;
 
 };
 

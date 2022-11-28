@@ -1,5 +1,8 @@
 #pragma once
 #include "Shape.h"
+
+// DECLARATION
+
 class Triangle : public Shape
 {
 public:
@@ -7,7 +10,10 @@ public:
 };
 
 
-#include "Triangle.h"
+
+
+//IMPLEMENTATION.....
+
 double Triangle::getArea() {
 	return (height * width) / 2;
 }
