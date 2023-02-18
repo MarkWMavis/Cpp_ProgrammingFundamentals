@@ -139,17 +139,15 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="OverloadedNonMemberOperators.cpp" />
-    <ClCompile Include="number.cpp" />
-    <ClCompile Include="controller.cpp" />
-    <ClCompile Include="overload_main.cpp" />
-    <ClCompile Include="OverloadedMemberOperators.cpp" />
+    <ClCompile Include="Overload_NonMember_Operators.cpp" />
+    <ClCompile Include="Controller.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="Overload_Member_Operators.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="controller.h" />
-    <ClInclude Include="OverloadedNonMemberOperators.h" />
-    <ClInclude Include="number.h" />
-    <ClInclude Include="OverloadedMemberOperators.h" />
+    <ClInclude Include="Controller.h" />
+    <ClInclude Include="Overload_NonMember_Operators.h" />
+    <ClInclude Include="Overload_Member_Operators.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

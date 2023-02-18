@@ -18,12 +18,24 @@
     <ClCompile Include="main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="namespace.cpp">
+    <ClCompile Include="sorting.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="math.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="function_pointers.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="class_namespace.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="namespace.h">
+    <ClInclude Include="namespaces_nested.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="class_namespace.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

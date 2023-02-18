@@ -15,15 +15,21 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="inheritance.h">
+    <ClInclude Include="inheriting_classes.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="inheriting_baseball_team.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="inheritance.cpp">
+    <ClCompile Include="inheriting_classes.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="inheriting_baseball_team.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

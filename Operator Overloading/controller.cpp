@@ -1,6 +1,6 @@
-#include "controller.h"
-#include "OverloadedMemberOperators.h"
-#include "OverloadedNonMemberOperators.h"
+#include "Controller.h"
+#include "Overload_Member_Operators.h"
+#include "Overload_NonMember_Operators.h"
 #include <iostream>
 using namespace std;
 
@@ -27,8 +27,6 @@ void OverloadingMoveOperator() {
 	a = "Bonjour";				//Overloaded constructor then move assignment
 }
 void OverloadingMemberOperators() {
-	
-
 	// Testing Unary Overloaded Operator (take no arguments)
 	Mystring Paul{ "PAUL" };
 	Mystring paul;
@@ -36,9 +34,7 @@ void OverloadingMemberOperators() {
 	paul = -Paul;
 	Paul.display();
 
-
 	// Testing Overloaded binary Operators (take one argument)
-
 	//	Operator+ Test
 	Mystring larry{ "Larry" };
 	Mystring moe{ "Moe" };
@@ -57,12 +53,7 @@ void OverloadingMemberOperators() {
 
 	cout << (Equal == equal) << endl;
 	cout << (Equal == NotEqual) << endl;
-
-
-
 }
-
-
 
 //FFunctions that implement the exerices using the Class that has Overloaded Non-Member Operators
 void OverloadingNonMemberOperators() {

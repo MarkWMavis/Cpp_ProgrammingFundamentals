@@ -21,7 +21,7 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{5579569d-9e31-46d1-a2a9-158652c4e3df}</ProjectGuid>
+    <ProjectGuid>{19e6797f-7a74-4569-8792-dded6d029b7e}</ProjectGuid>
     <RootNamespace>Pointers</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
@@ -139,11 +139,13 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="pointers.h" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="Pointers.cpp" />
+    <ClCompile Include="Pointer_Basics.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="main.cpp" />
-    <ClCompile Include="pointers.cpp" />
+    <ClInclude Include="Pointers.h" />
+    <ClInclude Include="Pointer_Basics.hpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -24,6 +24,7 @@
     <ProjectGuid>{2f90b6b9-ab80-4441-9967-17bd184578e4}</ProjectGuid>
     <RootNamespace>ExpressionsAndStatements</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+    <ProjectName>Expressions and Statements</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
