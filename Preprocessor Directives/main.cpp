@@ -9,6 +9,10 @@
 
 int NumberArray[ARRAY_SIZE];
 
+
+void printArray();
+
+
 int main() {
     for (int i = 0; i < ARRAY_SIZE; i++) {
         NumberArray[i] = rand() % 100;
@@ -18,6 +22,6 @@ int main() {
 
 void printArray() {
     for (int i = 0; i < ARRAY_SIZE; i++) {
-        printf("Array Index #d had value %d", i, NumberArray[i]);
+        printf("Array Index %d had value %d", i, NumberArray[i]);
     }
 }

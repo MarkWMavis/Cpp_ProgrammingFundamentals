@@ -1,5 +1,5 @@
 #include "Exception_Handling.hpp"
 
-int Main() {
+void main() {
 	RunExceptionHandling();
 }

@@ -8,9 +8,6 @@ void namespaces::sorting::Mergesort() {
 	if (sorting::comparison::Greater(a, b)) {
 
 	}
-	else {
-		internalFunction();
-	}
 }
 bool namespaces::sorting::comparison::Greater(int x, int y) {
 	if (x > y) return true;

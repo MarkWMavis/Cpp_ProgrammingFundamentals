@@ -37,5 +37,6 @@ public:
 			//return element
 			return element;
 		}
+		return element;
 	}
 };

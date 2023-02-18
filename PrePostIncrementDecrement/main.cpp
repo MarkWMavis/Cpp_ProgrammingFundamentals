@@ -52,8 +52,5 @@ int main() {
 	printp(--pointer);
 	printf("Final pointer address is %p and value of pointer is %d\n", pointer, *pointer);
 
-
-
-
-
 	return 0;
+}

@@ -7,7 +7,7 @@ constexpr int repeat = 5;
 int main() {
 	const char* fn = "testfile.txt";
 	const char* str = "this is a literal c-string";
-
+	
 	puts("Writing file");
 	FILE* fw = fopen(fn, "w"); //Opens the fn file in write mode
 	for (int i = 0; i < repeat; i++) {

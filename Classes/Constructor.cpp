@@ -1,4 +1,5 @@
 #include "Constructor.h"
+#include "PublicConstructor.h"
 
 // Constructor Class Member Function Implementations
 void Constructor::setpi1(int value) { pi1 = value; };

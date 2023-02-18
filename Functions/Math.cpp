@@ -1,6 +1,6 @@
 #include "Math.h"
 
-#include <iostream>		//Cout
+#include <iostream>		//cout, cin
 #include <cmath>		//Functions: sqrt, cbrt, sin, cos, ceiling, floor, round, pow
 
 #include <cstdlib>		//Random number generator
@@ -37,7 +37,7 @@ void NumberGen::random_number_generator() {
 
 	std::cout << "RAND_MAX on my system is:" << RAND_MAX << std::endl;
 	std::cout << "Modulus RAND_MAX is: " << RAND_MAX % (max + min) << std::endl;
-	srand(time(nullptr));
+	//srand(time(nullptr));
 
 	for (size_t i{ 1 }; i <= count; ++i) {
 		random_number = rand() % max + min;

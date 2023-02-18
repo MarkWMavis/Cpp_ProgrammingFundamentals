@@ -64,8 +64,8 @@ int main() {
 	printf("%s\n", returnedString.c_str());
 
 	// Pointers to Functions----------------------------------------------
-	void (*pfunction)() = function;
-	(*pfunction)();
+	//void (*pfunction)() = function;
+	//(*pfunction)();
 
 	int (*pfunctionReturn)() = functionReturn;
 	printf("The functionReturn value is: %d", (*pfunctionReturn)());
@@ -90,9 +90,8 @@ int main() {
 
 	
 	// Math Class Demonstration-------------------------------------------
-	Math::math_library_exercise();
-	NumberGen::random_number_generator();
-
+	//Math::math_library_exercise();
+	//NumberGen::random_number_generator();
 
 	return 0;
 }

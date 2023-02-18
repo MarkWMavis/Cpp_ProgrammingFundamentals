@@ -24,17 +24,14 @@
 	pointer to the address of the variable
 	int* a = &a
 */
-
-void ReadPointerInfo(int* int_pointer);
-void ReadUint8Array(uint8_t* arr);
 void ReadPointerInfo(int* int_pointer) {
 	std::cout << "Stack Memory Address of pointer: " << &int_pointer << std::endl;
 	std::cout << "Heap Memory Address of Value: " << int_pointer << std::endl;
 	std::cout << "Value Held at This Address: " << *int_pointer << std::endl;
-}
-void ReadUint8Array(uint8_t* arr) {
+};
 
-	auto address = arr;
+void ReadUint8Array(uint8_t* arr) {
+	uint8_t* address = arr;
 	for (uint8_t* i = arr; *i != NULL; i++) {
 		std::cout << *i;
 	}
