@@ -1,0 +1,117 @@
+#include "Strings.h"
+
+
+#include <sstream>	// String Stream Library
+#include <cmath>
+#include <cstdio>
+#include <vector>
+#include <iostream>
+#include <algorithm>
+#include <string>	// strtok function, 
+#include <map>
+
+using namespace std;
+
+void AttributeParser() {
+    /* Enter your code here. Read input from STDIN. Print output to STDOUT */
+
+    int n, q, i;
+    cin >> n >> q;
+    string temp;
+    vector<string> hrml;
+    vector<string> quer;
+    cin.ignore();   //clear cin buffer
+
+    for (i = 0; i < n; i++) {
+        getline(cin, temp);
+        hrml.push_back(temp);
+    }
+    
+    for (i = 0; i < q; i++) {
+        getline(cin, temp);
+        quer.push_back(temp);
+    }
+
+    map<string, string> m;
+    vector<string> tag;
+    for (i = 0; i < n; i++)
+    {
+        temp = hrml[i];
+        temp.erase(remove(temp.begin(), temp.end(), '\"'), temp.end());
+        temp.erase(remove(temp.begin(), temp.end(), '>'), temp.end());
+        if (temp.substr(0, 2) == "</")
+        {
+            tag.pop_back();
+        }
+        else
+        {
+            stringstream ss;
+            ss.str("");
+            ss << temp;
+            string t1, p1, v1;
+            char ch;
+            ss >> ch >> t1 >> p1 >> ch >> v1;
+            string temp1 = "";
+            if (tag.size() > 0)
+            {
+                temp1 = *tag.rbegin();
+                temp1 = temp1 + "." + t1;
+            }
+            else
+            {
+                temp1 = t1;
+            }
+            tag.push_back(temp1);
+            m[*tag.rbegin() + "~" + p1] = v1;
+            while (ss)
+            {
+                ss >> p1 >> ch >> v1;
+                m[*tag.rbegin() + "~" + p1] = v1;
+            }
+        }
+    }
+    for (i = 0; i < q; i++)
+    {
+        if (m.find(quer[i]) == m.end())
+        {
+            cout << "Not Found!\n";
+        }
+        else
+        {
+            cout << m[quer[i]] << endl;
+        }
+    }
+}
+
+void StringStream(string str) {
+    stringstream ss(str);
+    vector<int> integers;
+    
+    int temp;
+    char delimiters;
+
+    while (ss >> temp) {
+        integers.push_back(temp);
+        ss >> delimiters;
+    }
+    
+    for (int i = 0; i < integers.size(); i++) {
+        cout << integers[i] << "\n";
+    }
+}
+
+void Strings(string str) {
+    stringstream ss(str);
+    string a;
+    string b;
+    ss >> a >> b;
+
+    cout << a.size() << " " << b.size() << endl;
+    cout << a + b << endl;
+    
+    char temp = a[0];
+    a[0] = b[0];
+    b[0] = temp;
+    cout << a << " " << b << endl;
+
+}

@@ -1,5 +1,5 @@
-#include "Pointer_Basics.hpp"
-#include "Pointers.h"
+#include "Pointers.hpp"
+#include "HelperFunctions.hpp"
 
 int main() {
 
@@ -21,8 +21,6 @@ int main() {
 	intarr_pointer = intarr_startingAddress;
 	delete[] intarr_pointer;	//Deleting values in this block
 	intarr_pointer = NULL;
-
-
 
 	uint8_t* newArray = new uint8_t[5]{ 12, 65, 64, 54, 92 };
 	uint8_t* newArrayMidPointer = &newArray[2];

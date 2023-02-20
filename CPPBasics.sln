@@ -59,9 +59,11 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Structures", "structures\st
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Templates", "Templates\Templates.vcxproj", "{B5E7D8BA-AA44-410C-B053-55560476B9FB}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "VariablesandConstants", "VariablesandConstants\VariablesandConstants.vcxproj", "{31826A77-8654-4E75-AFA5-C73F25ED580B}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Variables And Constants", "VariablesandConstants\VariablesandConstants.vcxproj", "{31826A77-8654-4E75-AFA5-C73F25ED580B}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Overloading", "Overloading\Overloading.vcxproj", "{4568F74A-7061-47FD-83AE-18D9F27AC730}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Hackerrank", "Hackerrank\Hackerrank.vcxproj", "{521FC9A3-7666-4F73-B3CD-B70EC997155C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -287,6 +289,14 @@ Global
 		{4568F74A-7061-47FD-83AE-18D9F27AC730}.Release|x64.Build.0 = Release|x64
 		{4568F74A-7061-47FD-83AE-18D9F27AC730}.Release|x86.ActiveCfg = Release|Win32
 		{4568F74A-7061-47FD-83AE-18D9F27AC730}.Release|x86.Build.0 = Release|Win32
+		{521FC9A3-7666-4F73-B3CD-B70EC997155C}.Debug|x64.ActiveCfg = Debug|x64
+		{521FC9A3-7666-4F73-B3CD-B70EC997155C}.Debug|x64.Build.0 = Debug|x64
+		{521FC9A3-7666-4F73-B3CD-B70EC997155C}.Debug|x86.ActiveCfg = Debug|Win32
+		{521FC9A3-7666-4F73-B3CD-B70EC997155C}.Debug|x86.Build.0 = Debug|Win32
+		{521FC9A3-7666-4F73-B3CD-B70EC997155C}.Release|x64.ActiveCfg = Release|x64
+		{521FC9A3-7666-4F73-B3CD-B70EC997155C}.Release|x64.Build.0 = Release|x64
+		{521FC9A3-7666-4F73-B3CD-B70EC997155C}.Release|x86.ActiveCfg = Release|Win32
+		{521FC9A3-7666-4F73-B3CD-B70EC997155C}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

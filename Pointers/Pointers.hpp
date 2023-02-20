@@ -1,18 +1,8 @@
 #pragma once
-#include "iostream"
+#include <iostream>
 
-// Helper Classes------------------------------------------------
-class Box {
-private:
-	int m_width;
-	int m_height;
-public:
-	Box(int w, int h);
-	void addToWidth(int w);
-	void addToHeight(int h);
-	void PrintDimensions();
-};
-//---------------------------------------------------------------
+void ReadPointerInfo(int* int_pointer);
+void ReadUint8Array(uint8_t* arr);
 
 // Helper Functions----------------------------------------------
 void CallByReferenceHelper(int* a);
@@ -31,5 +21,3 @@ void PointersAndDynamicMemory();
 void PointersAsFunctionReturns();
 void FunctionPointers();
 
-
-void IncrementBoxDimensions(Box& b, int width, int height);
