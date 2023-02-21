@@ -127,10 +127,15 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="Introduction.h" />
-    <ClInclude Include="Strings.h" />
+    <ClInclude Include="Classes.hpp" />
+    <ClInclude Include="Introduction.hpp" />
+    <ClInclude Include="STL.hpp" />
+    <ClInclude Include="Strings.hpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Classes.cpp" />
+    <ClCompile Include="Controller.cpp" />
+    <ClCompile Include="Controller.hpp" />
     <ClCompile Include="Introduction.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Strings.cpp" />
