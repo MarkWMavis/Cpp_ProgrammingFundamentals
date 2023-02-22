@@ -35,7 +35,7 @@ void BasicDataTypes() {
 
 
     int result;
-    result = scanf_s("%i %ld %c %3e3f %lf", &a, &b, &c, &d, &e);
+    result = scanf_s("%i %ld %c %3e3f %lf", &a, &b, &c, 1, &d, &e);
     printf(" %i\n %ld\n %c\n %3e3f\n %lf", a, b, c, d, e);
 
 }

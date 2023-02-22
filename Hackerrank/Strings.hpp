@@ -1,7 +1,7 @@
 #pragma once
-#include <string>
-using namespace std;
 
+#include <string>
+using std::string;
 
 void AttributeParser();
 void StringStream(string str);

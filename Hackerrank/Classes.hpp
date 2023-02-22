@@ -1,10 +1,13 @@
 #pragma once
+
 #include <vector>
-#include <iostream>
+using std::vector;
+
 #include <ostream>
+using std::ostream;
 
 class Student {
-	std::vector<int> scores;
+	vector<int> scores;
 public:
 	void input();
 	int calculateTotalScore();
@@ -24,8 +27,8 @@ public:
 	int getHeight();
 	long long CalculateVolume();
 	bool operator<(Box&);
-	friend std::ostream& operator<<(std::ostream&, const Box&);
+	friend ostream& operator<<(ostream&, const Box&);
 };
 
-std::ostream& operator<<(std::ostream&, const Box&);
+ostream& operator<<(ostream&, const Box&);
 
