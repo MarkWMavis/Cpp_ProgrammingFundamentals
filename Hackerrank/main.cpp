@@ -21,11 +21,5 @@ int main() {
 	//Sets_STL();
 	//Maps_STL();
 
-	Challenge1();
-
-	//Challenge2();
-
-	//Challenge3();
-
 	return 0;
 }
