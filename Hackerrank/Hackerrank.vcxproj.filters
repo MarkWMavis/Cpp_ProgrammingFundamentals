@@ -47,5 +47,25 @@
     <ClCompile Include="Classes.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="STL.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="Maps_STL.txt">
+      <Filter>Resource Files</Filter>
+    </Text>
+    <Text Include="Challenge1.txt">
+      <Filter>Resource Files</Filter>
+    </Text>
+    <Text Include="Challenge2.txt">
+      <Filter>Resource Files</Filter>
+    </Text>
+    <Text Include="Challenge3.txt">
+      <Filter>Resource Files</Filter>
+    </Text>
+    <Text Include="AttributeParser.txt">
+      <Filter>Resource Files</Filter>
+    </Text>
   </ItemGroup>
 </Project>

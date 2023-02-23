@@ -2,36 +2,68 @@
 
 
 #include <sstream>	// String Stream Library
+using std::stringstream;
 #include <cmath>
 #include <cstdio>
 #include <vector>
+using std::vector;
+
 #include <iostream>
 #include <algorithm>
 #include <string>	// strtok function, 
+
 #include <map>
+using std::map;
+
+#include <fstream>
+using std::ifstream;
+using std::ios;
 
 using namespace std;
 
 void AttributeParser() {
     /* Enter your code here. Read input from STDIN. Print output to STDOUT */
-
+    ifstream inputFile;
+    inputFile.open("AttributeParser.txt", ios::in);
+   
     int n, q, i;
-    cin >> n >> q;
-    string temp;
-    vector<string> hrml;
+    inputFile >> n >> q;
+    inputFile.ignore();
+    string discard;
+    string line, tagNum, tagKey, tagVal ;
+    map<string, string> m;
+
+    vector<map<string, string>> multivector;
+    
     vector<string> quer;
-    cin.ignore();   //clear cin buffer
 
     for (i = 0; i < n; i++) {
-        getline(cin, temp);
-        hrml.push_back(temp);
-    }
-    
-    for (i = 0; i < q; i++) {
-        getline(cin, temp);
-        quer.push_back(temp);
+        
+        if (i < n / 2) {
+            string temp;
+            string tagTemp;
+
+            getline(inputFile, line);
+            copy(line.begin() + 1, line.end() - 1, back_inserter(temp));
+
+            stringstream ss(temp);
+            while (ss >> tagNum) {
+                multivector.push_back(map<string, string>());
+                ss >> tagKey >> discard >> tagVal;
+                copy(tagVal.begin() + 1, tagVal.end() - 1, back_inserter(tagTemp));
+                tagVal = tagTemp;
+                multivector[i].insert(make_pair(tagKey, tagVal));
+            }
+        }
+        else {
+            inputFile >> discard;
+        }  
     }
 
+
+    
+    
+    /*
     map<string, string> m;
     vector<string> tag;
     for (i = 0; i < n; i++)
@@ -81,6 +113,7 @@ void AttributeParser() {
             cout << m[quer[i]] << endl;
         }
     }
+    */
 }
 
 void StringStream(string str) {

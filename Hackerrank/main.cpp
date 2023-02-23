@@ -2,6 +2,7 @@
 #include "Strings.hpp"
 #include "Controller.hpp"
 #include "Classes.hpp"
+#include "STL.hpp"
 
 
 int main() {
@@ -13,6 +14,18 @@ int main() {
 	//ClassesAndObjects();
 	//VectorSort();
 	//BoxIt();
-	Vector_Erase();
+	//Vector_Erase();
+
+	/*-----------STL------------*/
+	//LowerBoundSTL();
+	//Sets_STL();
+	//Maps_STL();
+
+	Challenge1();
+
+	//Challenge2();
+
+	//Challenge3();
+
 	return 0;
 }

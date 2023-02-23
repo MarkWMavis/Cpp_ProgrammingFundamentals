@@ -137,3 +137,30 @@ void Vector_Erase() {
         cout << x << " ";
     }
 }
+
+void LowerBoundSTL() {
+
+    int numOfInts, i;
+    cin >> numOfInts;
+    vector<int> v;
+    
+    int temp;
+    for (i = 0; i < numOfInts; i++) {
+        cin >> temp;
+        v.push_back(temp);
+    }
+    
+    int numOfQuerys;
+    cin >> numOfQuerys;
+    for (i = 0; i < numOfQuerys; i++) {
+        cin >> temp;
+        vector<int>::iterator it = std::lower_bound(v.begin(), v.end(), temp);
+
+        if (*it == temp) {
+            cout << "YES " << (it - v.begin())+1 << endl;
+        }
+        else {
+            cout << "NO " << (it - v.begin()) + 1 << endl;
+        }
+    }
+}

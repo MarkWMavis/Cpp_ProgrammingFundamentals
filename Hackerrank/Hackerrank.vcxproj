@@ -138,7 +138,15 @@
     <ClCompile Include="Controller.hpp" />
     <ClCompile Include="Introduction.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="STL.cpp" />
     <ClCompile Include="Strings.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="AttributeParser.txt" />
+    <Text Include="Challenge1.txt" />
+    <Text Include="Challenge2.txt" />
+    <Text Include="Challenge3.txt" />
+    <Text Include="Maps_STL.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
