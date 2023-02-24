@@ -38,12 +38,6 @@
     <ClCompile Include="Strings.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Controller.hpp">
-      <Filter>Header Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Controller.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="Classes.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -55,13 +49,7 @@
     <Text Include="Maps_STL.txt">
       <Filter>Resource Files</Filter>
     </Text>
-    <Text Include="Challenge1.txt">
-      <Filter>Resource Files</Filter>
-    </Text>
-    <Text Include="Challenge2.txt">
-      <Filter>Resource Files</Filter>
-    </Text>
-    <Text Include="Challenge3.txt">
+    <Text Include="vector.txt">
       <Filter>Resource Files</Filter>
     </Text>
     <Text Include="AttributeParser.txt">

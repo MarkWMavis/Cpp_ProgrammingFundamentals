@@ -134,8 +134,6 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Classes.cpp" />
-    <ClCompile Include="Controller.cpp" />
-    <ClCompile Include="Controller.hpp" />
     <ClCompile Include="Introduction.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="STL.cpp" />
@@ -143,9 +141,7 @@
   </ItemGroup>
   <ItemGroup>
     <Text Include="AttributeParser.txt" />
-    <Text Include="Challenge1.txt" />
-    <Text Include="Challenge2.txt" />
-    <Text Include="Challenge3.txt" />
+    <Text Include="vector.txt" />
     <Text Include="Maps_STL.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
