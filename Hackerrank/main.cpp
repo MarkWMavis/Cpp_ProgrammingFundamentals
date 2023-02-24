@@ -31,5 +31,10 @@ int main() {
 
 
 
+	
+	
+	
+	//SubGrid();
+
 	return 0;
 }
