@@ -18,6 +18,9 @@ using std::set;
 using std::multimap;
 using std::pair;
 
+#include <sstream>
+using std::stringstream;
+
 #include <fstream>
 using std::ifstream;
 using std::ios; // Input file stream mode flag. One of several flags
@@ -27,11 +30,81 @@ using std::ios; // Input file stream mode flag. One of several flags
 #include <numeric>
 using std::accumulate;
 
-#include <sstream>
-using std::stringstream;
-
 #include <algorithm>
 using std::sort;
+
+#include <algorithm>
+using std::min;
+
+
+void VectorSort() {
+    int n, i;
+    cin >> n;
+    vector<int> v;
+    for (i = 0; i < n; i++) {
+        int temp;
+        cin >> temp;
+        v.push_back(temp);
+    }
+
+    sort(v.begin(), v.end());
+
+    for (i = 0; i < n; i++) {
+        cout << v[i] << " ";
+    }
+}
+void Vector_Erase() {
+
+    int n;
+    cin >> n;
+    vector<int> v;
+
+    for (int i = 0; i < n; i++) {
+        int temp;
+        cin >> temp;
+        v.push_back(temp);
+    }
+
+    int idxMin, idxMax;
+
+    cin >> idxMin;
+    v.erase(v.begin() + (idxMin - 1));
+
+    cin >> idxMin >> idxMax;
+    v.erase(v.begin() + (idxMin - 1), v.begin() + (idxMax - 1));
+
+    cout << v.size() << endl;
+
+    for (int x : v) {
+        cout << x << " ";
+    }
+}
+void LowerBoundSTL() {
+
+    int numOfInts, i;
+    cin >> numOfInts;
+    vector<int> v;
+
+    int temp;
+    for (i = 0; i < numOfInts; i++) {
+        cin >> temp;
+        v.push_back(temp);
+    }
+
+    int numOfQuerys;
+    cin >> numOfQuerys;
+    for (i = 0; i < numOfQuerys; i++) {
+        cin >> temp;
+        vector<int>::iterator it = std::lower_bound(v.begin(), v.end(), temp);
+
+        if (*it == temp) {
+            cout << "YES " << (it - v.begin()) + 1 << endl;
+        }
+        else {
+            cout << "NO " << (it - v.begin()) + 1 << endl;
+        }
+    }
+}
 
 void Sets_STL() {
     int queryCount = 0, i = 0;
@@ -108,49 +181,70 @@ void Maps_STL() {
     }
 }
 
-void Challenge1() {
+void SubGrid() {
+/*
+
+rowDim = 3
+colDim = 3
+
+----------BoxSize = 1-------------- 9 - 1 boxes
+rowPos = 0 or 1 or 2
+colPos = 0 or 1 or 2
+0,0     0,1     0,2
+1,0     1,1     1,2
+2,0     2,1     2,2
+
+-----------BoxSize = 2------------- 4 - 4 boxes
+rowPos = 0 or 1     rowPos = 0 or 1
+colPos = 0 or 1     colPos = 1 or 2
+0,0 0,1             0,1 0,2
+1,0 1,1             1,1 1,2
+
+rowPos = 1 or 2     rowPos = 1 or 2
+colPos = 0 or 1     colPos = 1 or 2
+1,0 1,1             1,1 1,2
+2,0 2,1             2,1 2,2
+
+-----------BoxSize = 3------------- 1 - 9 box
+rowPos = 1 or 2     rowPos = 1 or 2
+colPos = 0 or 1     colPos = 1 or 2
+0,0 0,1 0,2
+1,0 1,1 1,2
+2,0 2,1 2,2
+
+*/
     ifstream inputFile;
-    inputFile.open("Challenge1.txt", ios::in);
+    inputFile.open("vector.txt");
 
     if (!inputFile.is_open()) {
-        cout << "Error opening file!" << endl;
+        cout << "File failed to open" << endl;
         return;
     }
 
-    int n, m, i, j;
+    int rowPos, rowDim, colPos, colDim, maxDim;
+    maxDim = min(rowDim, colDim);
+    
+    inputFile >> rowDim >> colDim;
 
-    inputFile >> n >> m;
     vector<vector<int>> v;
-    int temp;
 
-    for (i = 0; i < n; i++) {
+    for (rowPos = 0; rowPos < rowDim; rowPos++) {
         v.push_back(vector<int>());
-        for (j = 0; j < m; j++) {
-            inputFile >> temp;
-            v[i].push_back(temp);
+        for (int col = 0; col < colDim; col++) {
+            int val;
+            inputFile >> val;
+            v[rowPos].push_back(val);
         }
     }
 
-}
+    int boxSize = 1;
 
-void Challenge2() {
-    ifstream inputFile;
-    inputFile.open("Challenge2.txt", ios::in);
-
-    if (!inputFile.is_open()) {
-        cout << "Error opening file!" << endl;
-        return;
-    }
-
-
-}
-
-void Challenge3() {
-    ifstream inputFile;
-    inputFile.open("Challenge3.txt", ios::in);
-
-    if (!inputFile.is_open()) {
-        cout << "Error opening file!" << endl;
-        return;
+    while (boxSize < maxDim){
+        int boxSum = 0;
+        for (rowPos = 0; rowPos < rowDim; rowPos++) {
+            for (colPos = 0; colPos < colDim; colPos++) {
+               
+            }
+        }
     }
 }

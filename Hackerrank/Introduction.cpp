@@ -1,6 +1,11 @@
 #include "Introduction.hpp"
-#include <cstdio>
-#include <stdio.h>
+#include <iostream>
+using std::cin;
+using std::cout;
+using std::endl;
+
+#include <vector>
+using std::vector;
 
 void VariableSizeArrays() {
     int n, q;

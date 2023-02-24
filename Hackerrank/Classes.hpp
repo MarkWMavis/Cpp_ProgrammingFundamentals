@@ -32,3 +32,5 @@ public:
 
 ostream& operator<<(ostream&, const Box&);
 
+void ClassesAndObjects();
+void BoxIt();
