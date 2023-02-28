@@ -1,0 +1,10 @@
+9
+McLaren, 720S, 710
+Ferrari, 296 GTB, 654
+Audi, R8, 602
+Maserati, MC20, 630
+Porsche, 911 GT3 RS, 518
+Lamborghini, Huracan STO, 630
+Chevrolet, Corvette ZO6, 670
+Aston Martin, DBS, 715
+Ferrari, 812 Competizione, 819

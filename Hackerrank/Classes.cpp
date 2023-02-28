@@ -4,6 +4,9 @@ using std::cin;
 using std::cout;
 using std::endl;
 
+#include <string>
+using std::string;
+
 
 void Student::input() {
     int temp;
@@ -135,6 +138,38 @@ void BoxIt() {
         {
             Box NewBox(temp);
             cout << NewBox << endl;
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+void InheritedCode() {
+    int n, i;
+    string name;
+    cin >> n;
+    for (i = 0; i < n; i++) {
+        cin >> name;
+        if (name.length() < 3) {
+            cout << "Too Short: " << name.length() << endl;
+        }
+        else {
+            for (char x : name) {
+                if (typeid(x) == typeid(char)) {
+                    continue;
+                }
+                else {
+                    cout << "Invalid" << endl;
+                    break;
+                }
+            }
+            cout << "Valid" << endl;
         }
     }
 }

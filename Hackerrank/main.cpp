@@ -4,6 +4,12 @@
 #include "STL.hpp"
 
 
+/*--------Mathematics-----------*/
+#include "Fundamentals.hpp"
+
+
+
+
 int main() {
 	
 	/*-------Introduction-------*/
@@ -13,12 +19,12 @@ int main() {
 	/*---------Classes---------*/
 	//ClassesAndObjects();
 	//BoxIt();
+	InheritedCode();
 	
 	/*---------Strings---------*/
 	//StringStream("23,4,56");
 	//AttributeParser();
 	//Strings("abcd\nef");
-
 
 	/*-----------STL------------*/
 	//VectorSort();
@@ -29,12 +35,12 @@ int main() {
 	//SubGrid();
 
 
+	/*-----------Mathematics-----*/
+	//FindThePoint();
 
 
-	
-	
-	
-	//SubGrid();
+
+
 
 	return 0;
 }

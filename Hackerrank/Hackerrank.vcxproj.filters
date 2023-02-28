@@ -13,36 +13,60 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Header Files\Mathematics">
+      <UniqueIdentifier>{cff3ef19-6d03-4e18-b4ac-1ff57d8abe0d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\C++">
+      <UniqueIdentifier>{b8e87884-0453-4b75-b979-021de336218b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Mathematics">
+      <UniqueIdentifier>{aec6230a-43a2-45d1-bb23-6375e0771e27}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\C++">
+      <UniqueIdentifier>{0f6bd469-0ff6-4784-89d7-ea576de35309}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\Mathematics">
+      <UniqueIdentifier>{222e6471-e960-4fd1-9c7d-715db5af9342}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\Mathematics\Fundamentals">
+      <UniqueIdentifier>{8a690cb1-839b-4a64-b980-215c1702e635}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Introduction.hpp">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Strings.hpp">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="Classes.hpp">
-      <Filter>Header Files</Filter>
+      <Filter>Header Files\C++</Filter>
+    </ClInclude>
+    <ClInclude Include="Introduction.hpp">
+      <Filter>Header Files\C++</Filter>
     </ClInclude>
     <ClInclude Include="STL.hpp">
-      <Filter>Header Files</Filter>
+      <Filter>Header Files\C++</Filter>
+    </ClInclude>
+    <ClInclude Include="Strings.hpp">
+      <Filter>Header Files\C++</Filter>
+    </ClInclude>
+    <ClInclude Include="Fundamentals.hpp">
+      <Filter>Header Files\Mathematics</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Classes.cpp">
+      <Filter>Source Files\C++</Filter>
+    </ClCompile>
     <ClCompile Include="Introduction.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Source Files\C++</Filter>
+    </ClCompile>
+    <ClCompile Include="STL.cpp">
+      <Filter>Source Files\C++</Filter>
+    </ClCompile>
+    <ClCompile Include="Strings.cpp">
+      <Filter>Source Files\C++</Filter>
     </ClCompile>
     <ClCompile Include="main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Strings.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Classes.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="STL.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="Fundamentals.cpp">
+      <Filter>Source Files\Mathematics</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -54,6 +78,9 @@
     </Text>
     <Text Include="AttributeParser.txt">
       <Filter>Resource Files</Filter>
+    </Text>
+    <Text Include="FindThePoint.txt">
+      <Filter>Resource Files\Mathematics\Fundamentals</Filter>
     </Text>
   </ItemGroup>
 </Project>

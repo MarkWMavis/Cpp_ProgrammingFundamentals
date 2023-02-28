@@ -34,3 +34,18 @@ ostream& operator<<(ostream&, const Box&);
 
 void ClassesAndObjects();
 void BoxIt();
+
+
+
+class BadLengthException {
+private:
+	int n;
+public:
+	BadLengthException(int errornumber) {
+		n = errornumber;
+	}
+
+
+};
+
+void InheritedCode();
