@@ -5,32 +5,45 @@
       <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
       <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
     </Filter>
-    <Filter Include="Header Files">
-      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
-      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    <Filter Include="Templates">
+      <UniqueIdentifier>{9faf41a6-6916-4041-8fb6-13205013b9b8}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Resource Files">
-      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
-      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    <Filter Include="Templates\Generic Templates">
+      <UniqueIdentifier>{4b80a3cf-bf8d-4777-9037-b994e0464a91}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Templates\Generic Templates\Generic Class">
+      <UniqueIdentifier>{fafd0670-ab36-4c60-93f0-3ce29f85df5e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Templates\Generic Templates\Generic Function">
+      <UniqueIdentifier>{af2946e5-aac9-4ef6-830e-e6dcaef562cb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Templates\Specialization">
+      <UniqueIdentifier>{25c7aa76-58f1-41b5-8dcd-988e5765de95}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Generic_Class_Template.cpp">
+      <Filter>Templates\Generic Templates\Generic Class</Filter>
+    </ClCompile>
+    <ClCompile Include="Generic_Function_Template.cpp">
+      <Filter>Templates\Generic Templates\Generic Function</Filter>
+    </ClCompile>
+    <ClCompile Include="Template_Class_Specialization.cpp">
+      <Filter>Templates\Specialization</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Generic_Template.hpp">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="Generic_Class_Template.hpp">
+      <Filter>Templates\Generic Templates\Generic Class</Filter>
     </ClInclude>
-    <ClInclude Include="template_class.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="Generic_Function_Template.hpp">
+      <Filter>Templates\Generic Templates\Generic Function</Filter>
     </ClInclude>
-    <ClInclude Include="template_functions.hpp">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="template_class_specialization.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="Template_Class_Specification.hpp">
+      <Filter>Templates\Specialization</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

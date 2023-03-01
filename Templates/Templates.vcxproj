@@ -116,6 +116,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpp20</LanguageStandard>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -139,13 +140,15 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Generic_Class_Template.cpp" />
+    <ClCompile Include="Generic_Function_Template.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="Template_Class_Specialization.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Generic_Template.hpp" />
-    <ClInclude Include="template_class.h" />
-    <ClInclude Include="template_class_specialization.h" />
-    <ClInclude Include="template_functions.hpp" />
+    <ClInclude Include="Generic_Class_Template.hpp" />
+    <ClInclude Include="Generic_Function_Template.hpp" />
+    <ClInclude Include="Template_Class_Specification.hpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

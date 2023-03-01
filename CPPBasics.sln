@@ -65,7 +65,9 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Overloading", "Overloading\
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Hackerrank", "Hackerrank\Hackerrank.vcxproj", "{521FC9A3-7666-4F73-B3CD-B70EC997155C}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Constructors", "Constructors\Constructors.vcxproj", "{CD95ED47-C0E1-4EF1-81DE-D1D37AACAF67}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Garage Manager", "Constructors\Constructors.vcxproj", "{CD95ED47-C0E1-4EF1-81DE-D1D37AACAF67}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Printing", "Printing\Printing.vcxproj", "{B945559D-3DC8-4DA8-B4C5-D4BDD2FB2510}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -307,6 +309,14 @@ Global
 		{CD95ED47-C0E1-4EF1-81DE-D1D37AACAF67}.Release|x64.Build.0 = Release|x64
 		{CD95ED47-C0E1-4EF1-81DE-D1D37AACAF67}.Release|x86.ActiveCfg = Release|Win32
 		{CD95ED47-C0E1-4EF1-81DE-D1D37AACAF67}.Release|x86.Build.0 = Release|Win32
+		{B945559D-3DC8-4DA8-B4C5-D4BDD2FB2510}.Debug|x64.ActiveCfg = Debug|x64
+		{B945559D-3DC8-4DA8-B4C5-D4BDD2FB2510}.Debug|x64.Build.0 = Debug|x64
+		{B945559D-3DC8-4DA8-B4C5-D4BDD2FB2510}.Debug|x86.ActiveCfg = Debug|Win32
+		{B945559D-3DC8-4DA8-B4C5-D4BDD2FB2510}.Debug|x86.Build.0 = Debug|Win32
+		{B945559D-3DC8-4DA8-B4C5-D4BDD2FB2510}.Release|x64.ActiveCfg = Release|x64
+		{B945559D-3DC8-4DA8-B4C5-D4BDD2FB2510}.Release|x64.Build.0 = Release|x64
+		{B945559D-3DC8-4DA8-B4C5-D4BDD2FB2510}.Release|x86.ActiveCfg = Release|Win32
+		{B945559D-3DC8-4DA8-B4C5-D4BDD2FB2510}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -48,6 +48,9 @@
     <ClInclude Include="Fundamentals.hpp">
       <Filter>Header Files\Mathematics</Filter>
     </ClInclude>
+    <ClInclude Include="OtherConcepts.hpp">
+      <Filter>Header Files\C++</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Classes.cpp">
@@ -67,6 +70,9 @@
     </ClCompile>
     <ClCompile Include="Fundamentals.cpp">
       <Filter>Source Files\Mathematics</Filter>
+    </ClCompile>
+    <ClCompile Include="OtherConcepts.cpp">
+      <Filter>Source Files\C++</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
